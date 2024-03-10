@@ -1,8 +1,8 @@
 {
-  "name": "bigspring-light-astro",
+  "name": "av-development-site",
   "version": "2.0.0",
-  "description": "astro personal blog theme",
-  "author": "themefisher",
+  "description": "Business Website",
+  "author": "Anthony Velazquez",
   "license": "MIT",
   "scripts": {
     "dev": "astro dev",
