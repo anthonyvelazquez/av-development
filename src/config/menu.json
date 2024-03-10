@@ -1,0 +1,56 @@
+{
+  "main": [
+    {
+      "name": "Home",
+      "url": "/"
+    },
+    {
+      "name": "About",
+      "url": "/about"
+    },
+    {
+      "name": "Services",
+      "url": "/services"
+    },
+    {
+      "name": "Portfolio",
+      "url": "/portfolio"
+    },
+    {
+      "name": "Contact",
+      "url": "/contact"
+    }
+  ],
+  "footer": [
+    {
+      "name": "Navigation",
+      "menu": [
+        {
+          "text": "Pricing",
+          "url": "/pricing"
+        },
+        {
+          "text": "Quick Start",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "name": "Services",
+      "menu": [
+        {
+          "text": "Features",
+          "url": "#"
+        },
+        {
+          "text": "Platform",
+          "url": "#"
+        },
+        {
+          "text": "Pricing",
+          "url": "/pricing"
+        }
+      ]
+    }
+  ]
+}
