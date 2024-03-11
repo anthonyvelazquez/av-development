@@ -13,6 +13,10 @@
       "url": "/services"
     },
     {
+      "name": "Portfolio",
+      "url": "/portfolio"
+    },
+    {
       "name": "Contact",
       "url": "/contact"
     }
@@ -22,29 +26,24 @@
       "name": "Navigation",
       "menu": [
         {
-          "text": "Pricing",
-          "url": "/pricing"
+          "text": "Home",
+          "url": "/"
         },
         {
-          "text": "Quick Start",
-          "url": "#"
-        }
-      ]
-    },
-    {
-      "name": "Services",
-      "menu": [
-        {
-          "text": "Features",
-          "url": "#"
+          "text": "About",
+          "url": "/about"
         },
         {
-          "text": "Platform",
-          "url": "#"
+          "text": "Services",
+          "url": "/services"
         },
         {
-          "text": "Pricing",
-          "url": "/pricing"
+          "text": "Portfolio",
+          "url": "/portfolio"
+        },
+        {
+          "text": "Contact",
+          "url": "/contact"
         }
       ]
     }
