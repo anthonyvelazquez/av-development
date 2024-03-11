@@ -1,10 +1,9 @@
 ---
+import { Image } from "astro:assets";
 import Base from "../layouts/Base.astro";
 import { markdownify } from "../lib/utils/textConverter";
-import { getEntryBySlug } from "astro:content";
-import type { TPostType } from "../types";
-const entry = (await getEntryBySlug("faq", "index")) as TPostType;
-const { title, description, faqs } = entry.data;
+const title = "About Us";
+const description = "About us";
 ---
 
 <Base title={title} description={description}>
@@ -12,18 +11,20 @@ const { title, description, faqs } = entry.data;
     <div class="container">
       <h1 class="text-center font-normal" set:html={markdownify(title)} />
       <div class="section row -mt-6">
-        {
-          faqs?.map((faq) => (
-            <div class="col-12 mt-6 md:col-6">
-              <div class="p-12  shadow">
-                <div class="faq-head relative">
-                  <h4 set:html={markdownify(faq.title)} />
-                </div>
-                <p class="faq-body mt-4" set:html={markdownify(faq.answer)} />
-              </div>
-            </div>
-          ))
-        }
+        <div class="col-12 md:col-6">
+          <div class="p-12">
+            <h2 class="text-2xl font-bold">Anthony Velazquez</h2>
+            <p class="mt-4">Hello, I am the owner and sole developer of AV Development. My journey into the realm of programming commenced in my formative years as a personal hobby. Over time, this passion evolved into a dedicated career, augmented by formal education, self-directed learning, and over 7 years of hands-on experience with clients. I have cultivated a mastery of meticulous website coding through the arduous process of manual construction, adhering to industry best practices.
+            </p>
+            <p class="mt-4">What I found was that a lot of small businesses don't have the funds to spend thousands of dollars upfront on a new website. And the ones that did, got taken advantage of and have a terrible website that looks like it was built by someone in a dungeon and haven't seen design trends for the last 10 years. They were in a frustrating spot - they either can't afford a good website, and if they can they don't know who to trust to make something great. So I tweaked my business model to fit their needs. That's how I came up with my $0 down and $150 a month model. It's more managable for a small business to handle and won't hurt their bank accounts. 
+            </p>
+            <p class="mt-4"></p>
+          </div>
+        </div>
+        <div class="col-12 md:col-6">
+          <Image src="/images/profile.jpg" alt="Anthony Velazquez" width={538}
+          height={328} />
+        </div>
       </div>
     </div>
   </section>
