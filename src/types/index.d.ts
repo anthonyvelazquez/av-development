@@ -29,9 +29,11 @@ export type TPost = {
   render: () => Promise<void>;
 };
 
-export type TFaqItem = {
+export type TProjectItem = {
   title: string;
-  answer: string;
+  link: string;
+  image: string;
+  description: string;
 };
 
 export type TPostType = {
@@ -42,7 +44,7 @@ export type TPostType = {
   data: {
     title: string;
     draft: boolean;
-    faqs: FaqItem[];
+    projects: ProjectItem[];
     description?: string;
     call_to_action?: TCallToAction;
     plans?: TPlan[];

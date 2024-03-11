@@ -1,0 +1,51 @@
+---
+import { Image } from "astro:assets";
+import Base from "../layouts/Base.astro";
+import { markdownify } from "../lib/utils/textConverter";
+import { getEntryBySlug } from "astro:content";
+import type { TPostType } from "../types";
+const entry = (await getEntryBySlug("portfolio", "index")) as TPostType;
+const { title, description, projects } = entry.data;
+---
+
+<Base title={title} description={description}>
+  <section class="section">
+    <div class="container">
+      <h1 class="text-center font-normal" set:html={markdownify(title)} />
+      <div class="section row -mt-6">
+        {
+          projects?.map((project) => (
+            <div class="col-12 mt-6 md:col-6">
+              <div class="p-12  shadow">
+                <div class="faq-head relative">
+                  <h4 set:html={markdownify(project.title)} />
+                </div>
+                <Image
+                  class="mt-2 mx-auto"
+                  src={project.image}
+                  width={538}
+                  height={328}
+                  alt=""
+                />
+                <p class="faq-body mt-4" set:html={markdownify(project.description)} />
+                <a
+                    href={project.link}
+                    class="cta-link inline-flex items-center text-primary"
+                  >
+                    Visit
+                    <img
+                      class="ml-1"
+                      src="/images/arrow-right.svg"
+                      width={18}
+                      height={14}
+                      alt="arrow"
+                    />
+                  </a>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</Base>
