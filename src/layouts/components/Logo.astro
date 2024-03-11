@@ -16,11 +16,12 @@ const {
 } = config.site;
 ---
 
-<a href="/" class="navbar-brand block md:w-[200px] lg:w-auto flex items-center">
+<a href="/" class="navbar-brand md:w-[200px] lg:w-auto flex items-center">
   {
     <Image
         width={logo_width.replace("px", "") * 2}
         height={logo_height.replace("px", "") * 2}
+        loading="eager"
         src={logo}
         alt={title}
         style={{

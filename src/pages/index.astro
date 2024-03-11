@@ -35,9 +35,10 @@ const { banner, feature, services, workflow, call_to_action } = homepage.data;
               <Image
                 class="mx-auto mt-12"
                 src={banner?.image}
+                loading="eager"
                 width={750}
                 height={390}
-                alt="banner image"
+                alt="banner"
               />
             )
           }
@@ -57,13 +58,6 @@ const { banner, feature, services, workflow, call_to_action } = homepage.data;
           feature!.features.map((item: any, i: number) => (
             <div class="feature-card rounded-xl bg-white p-5 pb-8 text-center">
               {item.icon && (
-                // <Image
-                //   class="mx-auto"
-                //   src={item.icon}
-                //   width={30}
-                //   height={30}
-                //   alt=""
-                // />
                 <img
                   class="mx-auto"
                   alt={item.icon}
@@ -116,6 +110,7 @@ const { banner, feature, services, workflow, call_to_action } = homepage.data;
                     width={538}
                     height={328}
                     alt=""
+                    style={{maxHeight: "328px", maxWidth: "117px"}}
                   />
                 )}
               </div>
