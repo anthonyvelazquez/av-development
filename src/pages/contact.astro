@@ -5,7 +5,7 @@ import { markdownify } from "@/lib/utils/textConverter";
 import { getEntryBySlug } from "astro:content";
 
 const entry = await getEntryBySlug("contact", "index");
-const { contact_form_action } = config.params;
+const { contact_form_action, contact_access_key } = config.params;
 const { title, description, info } = entry?.data;
 ---
 
@@ -16,6 +16,8 @@ const { title, description, info } = entry?.data;
       <div class="section row pb-0">
         <div class="col-12 md:col-6 lg:col-7">
           <form class="contact-form" method="POST" action={contact_form_action}>
+            <input type="hidden" name="access_key" value={contact_access_key}>
+            <input type="hidden" name="redirect" value="https://web3forms.com/success">
             <div class="mb-3">
               <input
                 class="form-input w-full rounded"
@@ -46,6 +48,7 @@ const { title, description, info } = entry?.data;
             <div class="mb-3">
               <textarea
                 class="form-textarea w-full rounded-md"
+                name="message"
                 rows="7"
                 placeholder="Your message"></textarea>
             </div>

@@ -24,7 +24,8 @@
   },
 
   "params": {
-    "contact_form_action": "",
+    "contact_form_action": "https://api.web3forms.com/submit",
+    "contact_access_key": "01d41732-8335-43a4-be97-4a62f27bea0e",
     "tag_manager_id": "",
     "footer_content": "At AV Development, our goal is to provide cost-effective, tailored web solutions that leave a lasting impression.",
     "copyright": "Created by AV Development"
